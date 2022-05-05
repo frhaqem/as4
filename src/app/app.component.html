@@ -1,3 +1,57 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" contentId="sideMenu">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Home</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+       <ion-list>
+        <ion-menu-toggle>
+          <ion-item lines="none" routerLink="/home">
+            <ion-icon name="home" slot="start"></ion-icon>
+            <ion-label>Homepage</ion-label>
+          </ion-item>
+       </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item lines="none" routerLink="/places/tabs/discover">
+            <ion-icon name="hand-right" slot="start"></ion-icon>
+            <ion-label>Manage Donation</ion-label>
+          </ion-item>
+       </ion-menu-toggle>
+
+       <ion-menu-toggle>
+        <ion-item lines="none" routerLink="/delivery">
+          <ion-icon name="car" slot="start"></ion-icon>
+          <ion-label>Delivery Management</ion-label>
+        </ion-item>
+     </ion-menu-toggle>
+
+         <ion-menu-toggle>
+            <ion-item lines="none" routerLink="/profile">
+              <ion-icon name="person-circle" slot="start"></ion-icon>
+              <ion-label>Profile Management</ion-label>
+            </ion-item>
+         </ion-menu-toggle>
+
+         <ion-menu-toggle>
+          <ion-item lines="none" routerLink="/aboutus">
+            <ion-icon name="person" slot="start"></ion-icon>
+            <ion-label>About Us </ion-label>
+          </ion-item>
+       </ion-menu-toggle>
+
+         <ion-menu-toggle>
+            <ion-item lines="none" (click)="onLogout()">
+              <ion-icon name="log-out" slot="start"></ion-icon>
+              <ion-label>Logout</ion-label>
+            </ion-item>
+         </ion-menu-toggle>
+        </ion-list>
+    </ion-content>
+  
+  </ion-menu>
+  <ion-router-outlet id="sideMenu"></ion-router-outlet>
 </ion-app>
