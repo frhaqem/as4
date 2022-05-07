@@ -8,8 +8,8 @@
 <div class="title">
   <h2>login</h2>
    </div>
-  <ion-input placeholder="username" class="primary-input"></ion-input>
-  <ion-input placeholder="password" type="password" class="primary-input"></ion-input>
+  <ion-input placeholder="username" class="primary-input" name="username" ngModel #nameCtrl="ngModel"></ion-input>
+  <ion-input placeholder="password" type="password" name="password" ngModel #pwdCtrl="ngModel" class="primary-input"></ion-input>
 
   <div class="ion-margin-top ion-text-right forget">
     <a >Forgot password?</a>
