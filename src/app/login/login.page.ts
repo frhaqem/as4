@@ -20,25 +20,14 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
+  async login(){
+    this.router.navigateByUrl('home');
+  }
   async dismiss(){
-  await this.modalCtrl.dismiss();
+  
+      this.router.navigateByUrl('welcome');
+    
   }
-  OnLogin(){
-   this.router.navigate(['home']);
-    // this.loginService.logIn();
-
-    // this.loadCtrl.create({
-    //   keyboardClose: true,
-    //   message: 'Logging in...'
-    // }).then(loadingEl => {
-    //   loadingEl.present();
-      
-    // //faking a lagging response
-    // setTimeout(() => {
-    //   loadingEl.dismiss();
-    //   this.router.navigateByUrl('home');
-    // }, 1500); 
-    // });
-  }
+ 
 
 }

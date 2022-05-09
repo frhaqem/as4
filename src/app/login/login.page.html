@@ -1,8 +1,4 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content>
 <div class="title">
@@ -12,10 +8,10 @@
   <ion-input placeholder="password" type="password" name="password" ngModel #pwdCtrl="ngModel" class="primary-input"></ion-input>
 
   <div class="ion-margin-top ion-text-right forget">
-    <a >Forgot password?</a>
+    <!-- <a href="">Already have account?</a> -->
   </div>
   <div class="ion-margin-top">
-    <ion-button expand="block" (click)="OnLogin()">LOGIN</ion-button>
+    <ion-button expand="block"  (click)="login()" >LOGIN</ion-button>
   </div>
   <div class="ion-margin-top ion-text-center">
     <a (click)="dismiss()">close</a>
